@@ -12,8 +12,16 @@
  * @return {boolean}
  */
 
-var checkTree = function(root) {
-    
+const root = {
+    val: 10,
+    left: {
+        val: 4
+    },
+    right: {
+        val: 6
+    }
 };
 
-console.log(checkTree(10, 4, 6));
+const checkTree = root => root.left.val + root.right.val === root.val;
+
+console.log(checkTree(root));
